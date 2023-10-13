@@ -28,5 +28,8 @@
     "psr-4": {
       "Routing\\": "src/"
     }
+  },
+  "scripts": {
+    "test:all": "./vendor/bin/phpunit --configuration phpunit.xml --testsuite All"
   }
 }
