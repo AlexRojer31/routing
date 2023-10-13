@@ -1,0 +1,32 @@
+{
+  "name": "alexrojer31/logging",
+  "description": "Базовая система маршрутизации для приложений",
+  "homepage": "https://alexrojer31.ru",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/alexrojer31/messages.git"
+    }
+  ],
+  "require": {
+      "php": ">=7.1.0",
+      "slim/slim": "3.*",
+      "twig/twig": "1.*",
+      "illuminate/database": "^7.30",
+      "alexrojer31/messages": "^1.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.5.20"
+  },
+  "suggest": {
+    "slim/slim": "Фреймворк для работы приложения",
+    "twig/twig": "Движок шаблонизатор",
+    "illuminate/database": "Работа с СУБД",
+    "alexrojer31/messages": "Различные классы сообщений"
+  },
+  "autoload": {
+    "psr-4": {
+      "Routing\\": "src/"
+    }
+  }
+}
