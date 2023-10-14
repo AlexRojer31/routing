@@ -79,7 +79,7 @@ class Router
     {
         foreach ($map as $path => $class) {
             if (is_array($class)) {
-                $this->constructRoutes($class, $path);
+                $this->constructRoutes($class, $pathPrefix . $path);
             } else {
                 foreach($class::MAP as $method => $description) {
                     if (!array_key_exists($method, Methods::METHODS)) {

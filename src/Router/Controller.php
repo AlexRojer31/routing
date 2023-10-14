@@ -62,13 +62,6 @@ abstract class Controller
     protected $context = [];
 
     /**
-     * Требуется ли авторизация
-     *
-     * @var bool
-     */
-    protected $needAuthorization = false;
-
-    /**
      * @param ContainerInterface $container
      */
     public function __construct(
@@ -83,10 +76,6 @@ abstract class Controller
         $this->args = $args;
         $this->container->get('eloquent');
         $this->assert();
-
-        if ($this->needAuthorization) {
-            return $this->notFound();
-        }
     }
 
     /**
