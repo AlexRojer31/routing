@@ -76,12 +76,21 @@ abstract class Controller
         $this->args = $args;
         $this->container->get('eloquent');
         $this->assert();
+        $this->afterConstructor();
     }
 
     /**
      * Добавляет контекст на html старницу
      */
     protected function assert(): void {}
+
+    /**
+     * Метод который вызывается в конструкторе,
+     * в нем можно дополнительно выполнить действия
+     * необходимые для работы класса.
+     * На пример: инициализровать переменную класса
+     */
+    protected function afterConstructor(): void {}
 
     /**
      * Получает IP
